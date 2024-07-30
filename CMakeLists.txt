@@ -42,3 +42,52 @@ target_link_directories(Portal PUBLIC ENV{POCO_LIB_PATH})
 target_link_libraries(Portal PocoNet
                              PocoUtil
                 )
+
+
+
+# =========================================
+NEW / MIX 
+
+
+# (c) Alberto Fernandez, July 2024
+# 1970
+
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10..3.20)
+
+PROJECT( Portal 
+         DESCRIPTION "Your own Portal to Internet"
+         VERSION 1.0 
+         LANGUAGES CXX)
+
+         
+# ===================================
+ADD_EXECUTABLE(Portal 
+                src/main.cpp
+            )
+
+TARGET_COMPILE_FEATURES(Portal PUBLIC cxx_std_17)
+SET_TARGET_PROPERTIES(Portal PROPERTIES CXX_EXTENSIONS OFF)
+
+# List of directories to include in the compilation
+TARGET_INCLUDE_DIRECTORIES(Portal PUBLIC include  
+                                         /home/alberto/Documents/poco-install/include
+                          )
+
+
+                          
+# Linking
+# ===================================
+# List of libraries search paths
+set(CMAKE_LIBRARY_PATH /home/alberto/Documents/poco-install/lib
+                       /home/alberto/Documents/poco-install/lib/Net
+    )
+
+# Look for these libraries and create a variable that reference it
+find_library(POCO_NET_LIB PocoNet)
+find_library(POCO_FOUNDATION_LIB PocoFoundation)
+find_library(POCO_UTIL_LIB PocoUtil)
+
+TARGET_LINK_LIBRARIES(Portal PUBLIC ${POCO_NET_LIB}
+                                    ${POCO_FOUNDATION_LIB}
+                                    ${POCO_UTIL_LIB}
+                     )

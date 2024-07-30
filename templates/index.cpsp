@@ -1,0 +1,36 @@
+<%@ page class="IndexHandler" %>
+    <%! 
+/**
+ * (c) Incomplete Worlds July 2024
+ * Alberto Fernandez
+ *
+ * Your own Portal to your Internet
+ */    
+#include "Poco/DateTime.h" 
+#include "Poco/DateTimeFormatter.h" 
+#include "Poco/DateTimeFormat.h" 
+
+using Poco::DateTime; 
+using Poco::DateTimeFormatter; 
+using Poco::DateTimeFormat; 
+    %>
+
+    <% 
+DateTime now; 
+std::string dt(DateTimeFormatter::format(now, DateTimeFormat::SORTABLE_FORMAT)); 
+    %>
+
+<html>
+
+<head>
+    <title>Time Sample</title>
+</head>
+
+<body>
+    <h1>Time Sample</h1>
+    <p>
+        <%= dt %>
+    </p>
+</body>
+
+</html>

@@ -1,4 +1,29 @@
 
+# Portal
+Your Own Portal to Internet
+
+Select, arrange and visualize the information that matters to you
+on your own way
+
+Created on July 25th 2024 by Alberto Fernandez, (c) Incomplete Worlds
+
+## Compile
+
+```sh
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+```
+
+## Run
+
+```sh
+$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/alberto/Documents/poco-install/lib
+$ ./Portal
+```
+Replace `poco-install/lib` by the folder where all Poco libs are installed
+
 ## Notes
 
 *Response*

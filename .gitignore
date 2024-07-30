@@ -1,16 +1,2 @@
 build/
-build/cmake_install.cmake
-build/CMakeCache.txt
-build/Makefile
-build/CMakeFiles/Makefile.cmake
-build/CMakeFiles/Makefile2
-build/CMakeFiles/TargetDirectories.txt
-build/CMakeFiles/portal.dir/build.make
-build/CMakeFiles/portal.dir/cmake_clean.cmake
-build/CMakeFiles/portal.dir/compiler_depend.internal
-build/CMakeFiles/portal.dir/compiler_depend.make
-build/CMakeFiles/portal.dir/depend.make
-build/CMakeFiles/portal.dir/DependInfo.cmake
-build/CMakeFiles/portal.dir/flags.make
-build/CMakeFiles/portal.dir/link.txt
-build/CMakeFiles/portal.dir/source/main.cpp.o.d
+templates/output/
